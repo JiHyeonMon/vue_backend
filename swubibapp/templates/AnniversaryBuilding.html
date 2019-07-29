@@ -1,0 +1,551 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    
+        <!-- 상단으로 이동하는 화살표 코드-->
+    <script type="text/javascript">
+            $(document).ready(function(){
+ 
+                var topHeight = parseInt($("#floatingTop").css("top").substring(0,$("#floatingTop").css("top").indexOf("px")));
+ 
+                $(window).scroll(function () { 
+                    offset = topHeight+$(document).scrollTop()+"px";
+                    $("#floatingTop").animate({top:offset},{duration:100,queue:false});
+                });
+ 
+            }); 
+    </script>
+    <style>
+            #floatingTop{
+                position:absolute;
+                width:40px;
+                top:150px;
+                right:100px;
+                padding:0;
+                margin:0;
+                z-index:1000;
+            }
+    </style>
+</head>
+<body>
+<!-- header -->
+<!-- 상단으로 이동하는 화살표 이미지-->
+    <div id="floatingTop">
+            <a href="#top"><img src="{% static 'up.png' %}" width="100" height="100"></a>
+    </div>
+<div class="jumbotron text-center" id="head-font-face">
+  <h1>50주년 기념관</h1>
+  <p>50주년 기념관 안에 있는 식당, 카페</p> 
+</div>
+  
+<!-- 이미지 클릭하면 해당 정보로 이동 -->
+<div class="container">
+  <div class="row nino-hoverEffect">
+    <div class="col-md-4 col-sm-4">
+        <a href="#뚜레쥬르">
+        <div class="card" id="card1" >
+            <img src="{% static 'Tous%20.png' %}" class="card-img-top" alt="...">
+            <div class="overlay">
+                <div class="text" id="font-face">뚜레쥬르</div>
+            </div>
+        </div>
+        </a>
+      </div>
+
+    <div class="col-md-4 col-sm-4">
+        <a href="#오니기리와이규동">
+        <div class="card" id="card2">
+            <img src="{% static 'gyudong.png' %}" class="card-img-top" alt="...">
+            <div class="overlay">
+                <div class="text" id="font-face">오니기리와 <br>이규동</div>
+            </div>
+        </div>
+        </a>
+      </div>
+    <div class="col-md-4 col-sm-4">
+        <a href="#감탄">
+        <div class="card" id="card3">
+            <img src="{% static 'gamtan.png' %}" class="card-img-top" alt="...">
+            <div class="overlay">
+                <div class="text" id="font-face">감탄</div>
+            </div>
+        </div>
+        </a>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 15px">
+    <div class="col-md-4 col-sm-4">
+        <a href="#CU편의점">
+        <div class="card" id="card4">
+            <img src="{% static 'cu.png' %}" class="card-img-top" alt="...">
+            <div class="overlay">
+                <div class="text" id="font-face">CU</div>
+            </div>
+        </div>
+        </a>
+    </div>
+    <div class="col-md-4 col-sm-4">
+        <a href="#스타벅스">
+        <div class="card" id="card5">
+            <img src="{% static 'starbucks.png' %}" class="card-img-top" alt="...">
+            <div class="overlay">
+                <div class="text" id="font-face">스타벅스</div>
+            </div>
+        </div>
+        </a>
+    </div>
+    <div class="col-md-4 col-sm-4">
+        <a href="#교직원">
+        <div class="card" id="card6">
+            <img src="{% static 'chubab.png' %}" class="card-img-top" alt="...">
+            <div class="overlay">
+                <div class="text" id="font-face">교직원 식당</div>
+            </div>
+        </div>
+        </a>
+    </div>
+  </div>
+</div>
+
+<br><br><hr><br>
+
+<!-- 이제 본문 내용-->
+
+<div class="container">
+    <table border="0" bordercolor="black" width ="1100" height="300" align = "center" >
+        <tr align ="left">
+            <p><td colspan = "3"><A name="뚜레쥬르"><h1>▶뚜레쥬르</h1></A></td></p>
+        </tr>
+        <tr align = "center">
+            <td width="250"><img src="{% static 'Tous%20.png' %}" align="left" width="250" height="250"></td>
+            <td width="400">
+                <li align="left">추천 메뉴<br>
+                    <ul></ul>
+                    <ul>리얼 브라우니     1,800</ul>
+                    <ul>고구마 크림빵    2,000</ul>
+                    <ul>애플파이          1,700</ul>
+                    <ul>소금버터빵     1,700</ul>
+                    <ul>딸기 스무디 4,500</ul>
+                </li></td>
+            <td align="left">
+                -빵집<br>
+                -주소:50주년 기념관 1층<br>
+                -일요일 휴무, 월~금 08:00-19:00, 토 08:00~15:00<br>
+                -사장님이 친절하심<br>
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="10" height="10" colspan="3">  
+                <img src="{% static '4.PNG' %}" width="200px">
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="3">
+                별점주기
+                <form>
+                    <input type="radio" name="score" value="1" /> 1점
+                    <input type="radio" name="score" value="2" /> 2점
+                    <input type="radio" name="score" value="3" /> 3점
+                    <input type="radio" name="score" value="4" /> 4점
+                    <input type="radio" name="score" value="5" checked="checked"  /> 5점
+                    <!--value 값을 받아온다.(폼태그이용) 그래서 별점 계산하기
+                    <script type="text/javascript">
+                        function score(){
+                            var score=document.getElementsByName('score');
+                            for(var i=0;i<score.length;i++){
+                                if(score[i].checked==true){
+                                    score+=score[i].value;
+                                }
+                            }
+                        }
+                    </script>-->
+                    
+                    <input type="submit" value="점수제출">
+                </form>
+                <hr>
+                여러분들의 후기를 기다립니다.<br>
+                <textarea name="text" rows="1" cols="50" style="border:1px ,black";></textarea>
+                <input type="submit" class="btn btn-dark" value="Add Comment">
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="3">
+                다른 사람들의 후기<br>
+                <!-- {{comment.date받아오기 }} -->
+                -브라우니 대존맛~
+            </td>
+        </tr>
+    </table>    
+</div>
+    <br><br><br>
+
+<div class="container">
+    <table border="0" bordercolor="black" width ="1100" height="300" align = "center" >
+        <tr align ="left">
+            <p><td colspan = "3"><A name="오니기리와이규동"><h1>▶오니기리와이규동</h1></A></td></p>
+        </tr>
+        <tr align = "center">
+            <td width="250"><img src="{% static 'gyudong.png' %}" align="left" width="250" height="250"></td>
+            <td width="400">
+                <li align="left">추천 메뉴<br>
+                    <ul></ul>
+                    <ul>부타마요동     6,500</ul>
+                    <ul>규카레동    6,900</ul>
+                    <ul>트리플 치즈규동      7,400</ul>
+                    <ul>고소한 멸치          2,200</ul>
+                </li></td>
+            <td align="left">
+                -규동과 오니기리(주먹밥)<br>
+                -주소:50주년 기념관 1층<br>
+                -일요일 휴무, 월~금 08:00-19:00, 토 08:00~15:00<br>
+                -학생들 사이에서 부타마요동이 인기 있음<br>
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="10" height="10" colspan="3">  
+                <img src="{% static '4.PNG' %}" width="200px">
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="3">
+                별점주기
+                <form>
+                    <input type="radio" name="score" value="1" /> 1점
+                    <input type="radio" name="score" value="2" /> 2점
+                    <input type="radio" name="score" value="3" /> 3점
+                    <input type="radio" name="score" value="4" /> 4점
+                    <input type="radio" name="score" value="5" checked="checked"  /> 5점
+                    <!--value 값을 받아온다.(폼태그이용) 그래서 별점 계산하기
+                    <script type="text/javascript">
+                        function score(){
+                            var score=document.getElementsByName('score');
+                            for(var i=0;i<score.length;i++){
+                                if(score[i].checked==true){
+                                    score+=score[i].value;
+                                }
+                            }
+                        }
+                    </script>-->
+                    
+                    <input type="submit" value="점수제출">
+                </form>
+                <hr>
+                여러분들의 후기를 기다립니다.<br>
+                <textarea name="text" rows="1" cols="50" style="border:1px ,black";></textarea>
+                <input type="submit" class="btn btn-dark" value="Add Comment">
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="3">
+                다른 사람들의 후기<br>
+                <!-- {{comment.date받아오기 }} -->
+                -삼각김밥은 편의점이 나은듯~~~~ -3-
+            </td>
+        </tr>
+    </table>    
+</div>
+    
+    <br><br><br>
+    
+
+<div class="container">
+    <table border="0" bordercolor="black" width ="1100" height="300" align = "center" >
+        <tr align ="left">
+            <p><td colspan = "3"><A name="감탄"><h1>▶감탄</h1></A></td></p>
+        </tr>
+        <tr align = "center">
+            <td width="250"><img src="{% static 'gamtan.png' %}" align="left" width="250" height="250"></td>
+            <td width="400">
+                <li align="left">추천 메뉴<br>
+                    <ul></ul>
+                    <ul>떡볶이     2,500</ul>
+                    <ul>더블치즈 떡볶이    4,500</ul>
+                    <ul>잔치국수      3,000</ul>
+                    <ul>1인세트          4,000</ul>
+                </li></td>
+            <td align="left">
+                -분식집<br>
+                -주소:50주년 기념관 1층<br>
+                -일요일 휴무, 월~금 08:00-19:00, 토 08:00~15:00<br>
+                -사실 떡볶이보다 다른 메뉴가 인기 있다.<br>
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="10" height="10" colspan="3">  
+                <img src="{% static '3.PNG' %}" width="200px">
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="3">
+                별점주기
+                <form>
+                    <input type="radio" name="score" value="1" /> 1점
+                    <input type="radio" name="score" value="2" /> 2점
+                    <input type="radio" name="score" value="3" /> 3점
+                    <input type="radio" name="score" value="4" /> 4점
+                    <input type="radio" name="score" value="5" checked="checked"  /> 5점
+                    <!--value 값을 받아온다.(폼태그이용) 그래서 별점 계산하기
+                    <script type="text/javascript">
+                        function score(){
+                            var score=document.getElementsByName('score');
+                            for(var i=0;i<score.length;i++){
+                                if(score[i].checked==true){
+                                    score+=score[i].value;
+                                }
+                            }
+                        }
+                    </script>-->
+                    
+                    <input type="submit" value="점수제출">
+                </form>
+                <hr>
+                여러분들의 후기를 기다립니다.<br>
+                <textarea name="text" rows="1" cols="50" style="border:1px ,black";></textarea>
+                <input type="submit" class="btn btn-dark" value="Add Comment">
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="3">
+                다른 사람들의 후기<br>
+                <!-- {{comment.date받아오기 }} -->
+            </td>
+        </tr>
+    </table>    
+</div>
+    
+    <br><br><br>
+    
+
+<div class="container">
+    <table border="0" bordercolor="black" width ="1100" height="300" align = "center" >
+        <tr align ="left">
+            <p><td colspan = "3"><A name="CU편의점"><h1>▶CU편의점</h1></A></td></p>
+        </tr>
+        <tr align = "center">
+            <td width="250"><img src="{% static 'cu.png' %}" align="left" width="250" height="250"></td>
+            <td width="400">
+                <li align="left">추천 메뉴<br>
+                    <ul></ul>
+                    <ul>컵라면     1,500</ul>
+                    <ul>과자    1,500</ul>
+                    <ul>그 외     </ul>
+                </li></td>
+            <td align="left">
+                -편의점<br>
+                -주소:50주년 기념관 1층<br>
+                -일요일 휴무, 월~금 08:00-19:00, 토 08:00~15:00<br>
+                -직원이 불친절함<br>
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="10" height="10" colspan="3">  
+                <img src="{% static '2.PNG' %}" width="200px">
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="3">
+                별점주기
+                <form>
+                    <input type="radio" name="score" value="1" /> 1점
+                    <input type="radio" name="score" value="2" /> 2점
+                    <input type="radio" name="score" value="3" /> 3점
+                    <input type="radio" name="score" value="4" /> 4점
+                    <input type="radio" name="score" value="5" checked="checked"  /> 5점
+                    <!--value 값을 받아온다.(폼태그이용) 그래서 별점 계산하기
+                    <script type="text/javascript">
+                        function score(){
+                            var score=document.getElementsByName('score');
+                            for(var i=0;i<score.length;i++){
+                                if(score[i].checked==true){
+                                    score+=score[i].value;
+                                }
+                            }
+                        }
+                    </script>-->
+                    
+                    <input type="submit" value="점수제출">
+                </form>
+                <hr>
+                여러분들의 후기를 기다립니다.<br>
+                <textarea name="text" rows="1" cols="50" style="border:1px ,black";></textarea>
+                <input type="submit" class="btn btn-dark" value="Add Comment">
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="3">
+                다른 사람들의 후기<br>
+                <!-- {{comment.date받아오기 }} -->
+                - 사장님이 별롬니다.
+            </td>
+        </tr>
+    </table>    
+</div>
+    
+    <br><br><br>
+
+    <div class="container">
+    <table border="0" bordercolor="black" width ="1100" height="300" align = "center" >
+        <tr align ="left">
+            <p><td colspan = "3"><A name="스타벅스"><h1>▶스타벅스</h1></A></td></p>
+        </tr>
+        <tr align = "center">
+            <td width="250"><img src="{% static 'starbucks.png' %}" align="left" width="250" height="250"></td>
+            <td width="400">
+                <li align="left">추천 메뉴<br>
+                    <ul></ul>
+                    <ul>그린티 프라푸치노     6,800</ul>
+                    <ul>딸기크림 프라푸치노    6,100</ul>
+                    <ul>자몽허니블랙     5,800</ul>
+                    <ul>딸기피치 블렌디드     6,600</ul>
+                    <ul>블루베리 치즈케잌     6,800</ul>
+                </li></td>
+            <td align="left">
+                -카페<br>
+                -주소:50주년 기념관 1층<br>
+                -월,화,목,금 08:00-22:00, 토 09:00~18:00, 수,일 10:00~19:00<br>
+                -직원이 불친절함<br>
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="10" height="10" colspan="3">  
+                <img src="{% static '3.PNG' %}" width="200px">
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="3">
+                별점주기
+                <form>
+                    <input type="radio" name="score" value="1" /> 1점
+                    <input type="radio" name="score" value="2" /> 2점
+                    <input type="radio" name="score" value="3" /> 3점
+                    <input type="radio" name="score" value="4" /> 4점
+                    <input type="radio" name="score" value="5" checked="checked"  /> 5점
+                    <!--value 값을 받아온다.(폼태그이용) 그래서 별점 계산하기
+                    <script type="text/javascript">
+                        function score(){
+                            var score=document.getElementsByName('score');
+                            for(var i=0;i<score.length;i++){
+                                if(score[i].checked==true){
+                                    score+=score[i].value;
+                                }
+                            }
+                        }
+                    </script>-->
+                    
+                    <input type="submit" value="점수제출">
+                </form>
+                <hr>
+                여러분들의 후기를 기다립니다.<br>
+                <textarea name="text" rows="1" cols="50" style="border:1px ,black";></textarea>
+                <input type="submit" class="btn btn-dark" value="Add Comment">
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="3">
+                다른 사람들의 후기<br>
+                <!-- {{comment.date받아오기 }} -->
+            </td>
+        </tr>
+    </table>    
+</div>
+    
+<br><br><br>
+
+    <div class="container">
+    <table border="0" bordercolor="black" width ="1100" height="300" align = "center" >
+        <tr align ="left">
+            <p><td colspan = "3"><A name="교직원"><h1>▶교직원식당</h1></A></td></p>
+        </tr>
+        <tr align = "center">
+            <td width="250"><img src="{% static 'chubab.png' %}" align="left" width="250" height="250"></td>
+            <td width="400">
+                <li align="left">메뉴<br>
+                    <ul>매주 식단이 나온다</ul>
+                </li></td>
+            <td align="left">
+                -식당<br>
+                -주소:50주년 기념관 1층<br>
+                -중식 11:00~14:30, 석식 17:00~18:30<br>
+                -맛있음<br>
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <td width="10" height="10" colspan="3">  
+                <img src="{% static '4.PNG' %}" width="200px">
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="3">
+                별점주기
+                <form>
+                    <input type="radio" name="score" value="1" /> 1점
+                    <input type="radio" name="score" value="2" /> 2점
+                    <input type="radio" name="score" value="3" /> 3점
+                    <input type="radio" name="score" value="4" /> 4점
+                    <input type="radio" name="score" value="5" checked="checked"  /> 5점
+                    <!--value 값을 받아온다.(폼태그이용) 그래서 별점 계산하기
+                    <script type="text/javascript">
+                        function score(){
+                            var score=document.getElementsByName('score');
+                            for(var i=0;i<score.length;i++){
+                                if(score[i].checked==true){
+                                    score+=score[i].value;
+                                }
+                            }
+                        }
+                    </script>-->
+                    
+                    <input type="submit" value="점수제출">
+                </form>
+                <hr>
+                여러분들의 후기를 기다립니다.<br>
+                <textarea name="text" rows="1" cols="50" style="border:1px ,black";></textarea>
+                <input type="submit" class="btn btn-dark" value="Add Comment">
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="3">
+                다른 사람들의 후기<br>
+                <!-- {{comment.date받아오기 }} -->
+            </td>
+        </tr>
+    </table>    
+</div>
+    
+    
+</body>
+</html>

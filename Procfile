@@ -1,0 +1,1 @@
+web: gunicorn swubib.wsgi --log-file -
