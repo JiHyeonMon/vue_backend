@@ -1,8 +1,19 @@
 var createError = require('http-errors');
-var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+
+var express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+
+mongoose.Promise = global.Promise;    // mongoDB 버전 4.11 이상부터 해주어야 에러 안남
+
+const mongoDB = 'mongodb://localhost:27017/vuedb'
+const promise = mongoose.connect(mongoDB, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
