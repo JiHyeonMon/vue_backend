@@ -4,10 +4,10 @@ const router = express.Router();
 const User = require('../models/user');
 const crypto = require('crypto');
 
-const users = require('../data/users.json');
+// const users = require('../data/users.json');
 
 router.get('/', function(req, res, next) {
-    User.find({}).then(it => res.json({users:it}));
+    User.find({}).then(allUser => res.json({users:allUser}));
 
     // res.json({user: users[0]});
 });

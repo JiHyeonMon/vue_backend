@@ -11,6 +11,7 @@ mongoose.Promise = global.Promise;    // mongoDB 버전 4.11 이상부터 해주
 
 const mongoDB = 'mongodb://localhost:27017/vuedb'
 const promise = mongoose.connect(mongoDB, {
+  useMongoClient: true,
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -19,6 +20,7 @@ var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var movieRouter = require('./routes/movies');
+var blogRouter = require('./routes/blog');
 
 var app = express();
 
@@ -36,6 +38,7 @@ app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 app.use('/api/login', loginRouter);
 app.use('/api/movies', movieRouter);
+app.use('/api/blog', blogRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
